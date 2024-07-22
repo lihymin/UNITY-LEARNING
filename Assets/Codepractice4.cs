@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class Codepractice4 : MonoBehaviour
 {
-    void Start()
-    {
-        int number = 5; //스칼라 값
-        Vector2 dir = new Vector2(2, 0); //벡터 값
-
-        transform.Translate(dir);
-    }
+    int number = 5; //스칼라 값
+    Vector2 dir = new Vector2(-1, 0); //벡터 값
     void Update()
     {
         //Input,KeyCode 클래스
@@ -22,6 +17,7 @@ public class Codepractice4 : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftArrow))
             Debug.Log("왼쪽으로 움직였습니다.");
+            transform.Translate(dir);
 
         if (Input.GetKeyUp(KeyCode.RightArrow))
             Debug.Log("오른쪽으로 움직였습니다.");
